@@ -172,40 +172,49 @@ for name in names:
 # 'sword' quantity is 1
 # 'shield' quantity is 1
 # 'arrow' quantity is 20
-
+inventory = {
+    'potion' : 5,
+ 'sword' : 1,
+ 'shield' : 1,
+ 'arrow' : 20
+}
 
 
 ################ Retrieve values from a dictionary ###############
 # Print out the quantity of potion only.
 # Print out the quantity of arrow only.
-
-
+print(inventory['arrow'])
+print(inventory['potion'])
 
 ########### Change the value of a dictionary key ###############
 # Change the quantity of sword to 2.
 # Change the quantity of shield to 3.
-
-
+inventory['sword'] = 2
+inventory['shield'] = 3
+print(inventory)
 
 
 ############ Increase the value of a dictionary key ############
 # Increase the quantity of potion by 10.
 # Decrease the quantity of arrow by 5.
 
-
-
+inventory['potion'] = inventory['potion'] + 10
+inventory['arrow'] = inventory['arrow'] + 5
+print(inventory)
 
 ############ Add a new key / value to the dictionary #####################
 # Add a new item => bow with quantity 1.
 # Add a new item => apple with quantity 8.
 
-
-
+inventory['bow'] = 1
+inventory['apple'] = 8
+print(inventory)
 
 ############ Delete a key / value from the dictionary #####################
 # Delete apple from the dictionary.
 
-
+del inventory['apple']
+print(inventory)
 
 
 ########### Loop through to Retrieve Keys ##################
@@ -213,14 +222,16 @@ for name in names:
 
 # Only display the keys.
 
-
+for items in inventory:
+    print(items)
 
 ########### Loop through to Retrieve Values ##################
 # Write a for loop, and only print out the quantities.
 # '''
 
 # # write and test your code here
-
+for items in inventory:
+    print(inventory[items])
 
 ########### Loop through to Retrieve Key and Values ##################
 # Write a for loop, and print out the item and quantity.
@@ -228,6 +239,8 @@ for name in names:
 # Example:
 # potion quantity: 5
 # arrow quantity: 20
-
+for items in inventory:
+    # print([items] ,":", inventory[items])
+    print(f"{items} : {inventory[items]}")
 
 # write and test your code here
